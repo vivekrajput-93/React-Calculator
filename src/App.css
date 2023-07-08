@@ -1,38 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+
+:root {
+
+ --Very-dark-desaturated-blue : hsl(222, 26%, 31%) ;  /*(main background) */
+  --Very-dark-desaturated-blue: hsl(223, 31%, 20%); /* (toggle background, keypad background) */
+  --Very-dark-desaturated-blue : hsl(224, 36%, 15%);  /* screen background */
+  
+
+  
+  --Desaturated-dark-blue : hsl(225, 21%, 49%);  /* (key background */
+  --Desaturated-dark-blue: hsl(224, 28%, 35%);   /*  (key shadow) */
+
+  --Vivid-magenta: hsl(285, 91%, 52%); /* (key shadow) */
+  --Grayish-orange: hsl(28, 16%, 65%);  /* (key shadow) */
+  --Dark-red : hsl(6, 70%, 34%); /* (key shadow) */
+  --Very-dark-cyan : hsl(185, 58%, 25%); /* (key shadow) */
+  --Dark-orange: hsl(25, 99%, 27%); /* (key shadow) */
+  --Desaturated-dark-blue: hsl(224, 28%, 35%);  /* (key shadow) */
+  
+  /* - Red (key background, toggle): hsl(6, 63%, 50%)
+  - Dark red (key shadow): hsl(6, 70%, 34%)
+  
+  - Light grayish orange (key background): hsl(30, 25%, 89%)
+  - Grayish orange (key shadow): hsl(28, 16%, 65%)
+  
+  #### Text
+  
+  - Very dark grayish blue: hsl(221, 14%, 31%)
+  - White: hsl(0, 0%, 100%)
+  
+  ### Theme 2
+  
+  #### Backgrounds
+  
+  - Light gray (main background): hsl(0, 0%, 90%)
+  - Grayish red (toggle background, keypad background): hsl(0, 5%, 81%)
+  - Very light gray (screen background): hsl(0, 0%, 93%)
+  
+  #### Keys
+  
+  - Dark moderate cyan (key background): hsl(185, 42%, 37%)
+  - Very dark cyan (key shadow): hsl(185, 58%, 25%)
+  
+  - Orange (key background, toggle): hsl(25, 98%, 40%)
+  - Dark orange (key shadow): hsl(25, 99%, 27%)
+  
+  - Light grayish yellow (key background): hsl(45, 7%, 89%)
+  - Dark grayish orange (key shadow): hsl(35, 11%, 61%)
+  
+  #### Text
+  
+  - Very dark grayish yellow: hsl(60, 10%, 19%)
+  - White (text): hsl(0, 0%, 100%)
+  
+  ### Theme 3
+  
+  #### Backgrounds
+  
+  - Very dark violet (main background): hsl(268, 75%, 9%)
+  - Very dark violet (toggle background, keypad background, screen background): hsl(268, 71%, 12%)
+  
+  #### Keys
+  
+  - Dark violet (key background): hsl(281, 89%, 26%)
+  - Vivid magenta (key shadow): hsl(285, 91%, 52%)
+  
+  - Pure cyan (key background, toggle): hsl(176, 100%, 44%)
+  - Soft cyan (key shadow): hsl(177, 92%, 70%)
+  
+  - Very dark violet (key background): hsl(268, 47%, 21%)
+  - Dark magenta (key shadow): hsl(290, 70%, 36%)
+  
+  #### Text
+  
+  - Light yellow: hsl(52, 100%, 62%)
+  - Very dark blue: hsl(198, 20%, 13%)
+  - White (text): hsl(0, 0%, 100%) */
+
+
+}
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'League Spartan', sans-serif;
+}
+
+
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.calculator {
+
+  margin: 20px auto;
+  width: 400px;
+  padding: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#header {
+  float: left;
+  color: #fff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+.buttons {
+  width: 450px;
+  display: grid;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(5, 75px);
+  border-radius: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: hsl(223, 31%, 20%);
+  border: none;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+.buttons > button {
+  margin-right: 0px;
+  margin-left: 10px;
+  padding: 10px 13px;
+  border-radius: 5px;
+  border: none;
+  font-size: 32px;
+  box-shadow: 0 5px #b4a597;
+  background-color: #eae3dc;
+  cursor: pointer;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input {
+  width: 450px;
+  margin: 30px 0;
+  height: 80px;
+  text-align: right;
+  border: none;
+  border-radius: 10px;
+  background-color: hsl(224, 36%, 15%);
+  font-size: 40px;
+  color: #fff;
+  padding-right: 15px;
+}
+
+#reset {
+    width: 190px;
+    background-color: #637097;
+    box-shadow: 0 5px #404e72;
+    color: #fff;
+}
+
+#equal {
+  width: 190px;
+  margin-left: 110px;
+  background-color: #d03f2f;
+  box-shadow: 0 5px #93261a;
+  color: #fff;
+}
+
+#delete {
+  background-color: #637097;
+  box-shadow: 0 5px #404e72;
+  color: #fff;
 }
